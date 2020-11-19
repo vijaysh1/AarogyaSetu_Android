@@ -31,7 +31,7 @@ android {
     compileSdkVersion Integer.parseInt(project.APP_COMPILE_SDK_VERSION)
     buildToolsVersion project.APP_BUILD_TOOL_VERSION
 
-    /* signingConfigs {
+    signingConfigs {
         release {
             storeFile file(keystoreProperties['key_store_cetificate'])
             storePassword keystoreProperties['key_store_password']
@@ -39,8 +39,8 @@ android {
             keyPassword keystoreProperties['key_password']
         }
     }
-*/
-    defaultConfig {
+
+defaultConfig {
         buildConfigField "String", "AUTH_ALIAS", "\"${authAlias}\""
         buildConfigField "String", "DID_UUID", "\"${didUUID}\""
         buildConfigField "String", "PINGER_UUID", "\"${pingerUUID}\""
